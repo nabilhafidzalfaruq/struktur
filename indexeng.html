@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Organisasi - Pendidikan Fisika UIN Sunan Kalijaga</title>
+    <style>
+      /* ============================================================
+   STRUKTUR ORGANISASI — MODERN PROFESSIONAL DESIGN
+   Theme: White dominant, Teal #01747b, Orange #f08619
+   ============================================================ */
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --orange: #f08619;
+        --orange-glow: rgba(240, 134, 25, 0.15);
+        --orange-soft: #fff5e9;
+        --teal: #01747b;
+        --teal-dark: #015a60;
+        --teal-soft: #e8f6f7;
+        --teal-glow: rgba(1, 116, 123, 0.12);
+        --white: #ffffff;
+        --bg-page: #f7f8fa;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --border: #e2e8f0;
+        --shadow-card:
+          0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 24px rgba(0, 0, 0, 0.06);
+        --shadow-hover:
+          0 8px 32px rgba(1, 116, 123, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+        --shadow-glow-teal: 0 0 40px rgba(1, 116, 123, 0.1);
+        --shadow-glow-orange: 0 0 40px rgba(240, 134, 25, 0.1);
+        --radius: 16px;
+        --radius-sm: 10px;
+        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      body {
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          BlinkMacSystemFont,
+          system-ui,
+          sans-serif;
+        background: var(--bg-page);
+        color: var(--text-secondary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ============================================================
+   HERO HEADER
+   ============================================================ */
+      .so-hero {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 50px 24px 48px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .so-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--teal),
+          var(--orange),
+          var(--teal)
+        );
+        background-size: 200% 100%;
+        animation: gradientSlide 6s ease infinite;
+      }
+
+      @keyframes gradientSlide {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .so-hero-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .so-hero-icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, var(--teal-soft), var(--white));
+        border: 2px solid var(--teal);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        box-shadow: var(--shadow-glow-teal);
+      }
+
+      .so-hero h1 {
+        font-size: clamp(26px, 4vw, 38px);
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+      }
+
+      .so-hero h1 .accent {
+        color: var(--teal);
+      }
+
+      .so-hero-sub {
+        font-size: 15px;
+        color: var(--text-muted);
+        max-width: 520px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      .so-hero-sub strong {
+        color: var(--teal);
+        font-weight: 600;
+      }
+
+      /* ============================================================
+   MAIN CHART AREA
+   ============================================================ */
+      .so-chart-area {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      /* ============================================================
+   ORG CARD — MODERN GLASS STYLE
+   ============================================================ */
+      .so-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-card);
+        overflow: hidden;
+        transition: all 0.35s var(--ease);
+        position: relative;
+      }
+
+      .so-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-6px);
+        border-color: var(--teal);
+      }
+
+      .so-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius);
+        opacity: 0;
+        transition: opacity 0.35s var(--ease);
+        pointer-events: none;
+        background: linear-gradient(
+          135deg,
+          rgba(1, 116, 123, 0.03),
+          rgba(240, 134, 25, 0.03)
+        );
+      }
+
+      .so-card:hover::after {
+        opacity: 1;
+      }
+
+      /* Role Bar */
+      .so-card-role {
+        padding: 10px 16px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--white);
+        background: var(--teal);
+        position: relative;
+      }
+
+      .so-card-role.is-teal {
+        background: var(--teal);
+      }
+      .so-card-role.is-orange {
+        background: var(--orange);
+      }
+      .so-card-role.is-dark {
+        background: var(--text-primary);
+      }
+
+      /* Card Body */
+      .so-card-body {
+        padding: 22px 18px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* Avatar */
+      .so-avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin-bottom: 14px;
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .so-avatar-ring {
+        position: absolute;
+        inset: -3px;
+        border-radius: 50%;
+        padding: 3px;
+        background: conic-gradient(var(--teal), var(--orange), var(--teal));
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: ringRotate 6s linear infinite;
+      }
+
+      @keyframes ringRotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .so-avatar-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--teal-soft), #f1f5f9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: var(--teal);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .so-avatar-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+      }
+
+      .so-card-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text-primary);
+        line-height: 1.4;
+        margin-bottom: 4px;
+      }
+
+      .so-card-desc {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      /* ============================================================
+   TIER LAYOUT — Flexbox rows for hierarchy
+   ============================================================ */
+      .so-tier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Vertical connector line */
+      .so-vline {
+        width: 2px;
+        background: linear-gradient(to bottom, var(--teal), var(--orange));
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .so-vline-h28 {
+        height: 28px;
+      }
+      .so-vline-h36 {
+        height: 36px;
+      }
+      .so-vline-h44 {
+        height: 44px;
+      }
+
+      .so-vline-dashed {
+        width: 2px;
+        border-left: 2px dashed var(--teal);
+        flex-shrink: 0;
+      }
+
+      /* Horizontal dashed line connector */
+      .so-hline-dashed {
+        height: 2px;
+        border-top: 2px dashed var(--orange);
+        flex: 1;
+        max-width: 48px;
+        align-self: center;
+      }
+
+      /* TOP LEADERSHIP (Rektor & Dekan) */
+      .so-top-leadership {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .so-top-leadership .so-card {
+        width: 300px;
+      }
+
+      /* MIDDLE MANAGEMENT ROW */
+      .so-mid-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+        max-width: 980px;
+      }
+
+      .so-mid-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        flex-shrink: 0;
+      }
+
+      .so-mid-side .so-card {
+        width: 230px;
+      }
+
+      .so-mid-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .so-mid-center .so-card {
+        width: 280px;
+      }
+
+      /* Central Stack with decorative wrapper */
+      .so-center-group {
+        background: linear-gradient(
+          135deg,
+          rgba(1, 116, 123, 0.03),
+          rgba(240, 134, 25, 0.02)
+        );
+        border: 1.5px dashed rgba(1, 116, 123, 0.2);
+        border-radius: 22px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .so-center-group::before {
+        content: " Pimpinan Prodi";
+        position: absolute;
+        top: -11px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--bg-page);
+        padding: 0 14px;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--teal);
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+      }
+
+      /* ============================================================
+   BOTTOM ROW — 4 UNIT CARDS
+   ============================================================ */
+      .so-bottom-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      /* Fork bar with 4 downward ticks */
+      .so-fork {
+        position: relative;
+        width: 80%;
+        max-width: 820px;
+        height: 2px;
+        background: var(--teal);
+        border-radius: 2px;
+      }
+
+      .so-fork::before,
+      .so-fork::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 30px;
+        background: var(--teal);
+      }
+
+      .so-fork::before {
+        left: 0;
+      }
+      .so-fork::after {
+        right: 0;
+      }
+
+      .so-fork-inner-left,
+      .so-fork-inner-right {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 30px;
+        background: var(--teal);
+      }
+
+      .so-fork-inner-left {
+        left: 33.33%;
+      }
+      .so-fork-inner-right {
+        left: 66.66%;
+      }
+
+      .so-bottom-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        width: 80%;
+        max-width: 820px;
+        margin-top: 30px;
+      }
+
+      /* Bottom Unit Card — Pill Style */
+      .so-unit {
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius);
+        padding: 22px 16px;
+        text-align: center;
+        transition: all 0.3s var(--ease);
+        position: relative;
+        overflow: hidden;
+        cursor: default;
+      }
+
+      .so-unit::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--teal), var(--orange));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s var(--ease);
+      }
+
+      .so-unit:hover {
+        border-color: var(--orange);
+        box-shadow: 0 6px 20px var(--orange-glow);
+        transform: translateY(-4px);
+      }
+
+      .so-unit:hover::before {
+        transform: scaleX(1);
+      }
+
+      .so-unit-icon {
+        width: 44px;
+        height: 44px;
+        margin: 0 auto 12px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        background: var(--teal-soft);
+        color: var(--teal);
+        transition: all 0.3s var(--ease);
+      }
+
+      .so-unit:hover .so-unit-icon {
+        background: var(--orange);
+        color: var(--white);
+        transform: scale(1.08) rotate(-3deg);
+      }
+
+      .so-unit-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: 0.3px;
+        line-height: 1.45;
+      }
+
+      /* ============================================================
+   SOCIAL FOOTER
+   ============================================================ */
+      .so-social {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 56px;
+        padding-top: 36px;
+        border-top: 1px solid var(--border);
+      }
+
+      .so-social a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        padding: 9px 20px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all 0.25s var(--ease);
+      }
+
+      .so-social a:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+        background: var(--teal-soft);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px var(--teal-glow);
+      }
+
+      /* ============================================================
+   FADE IN SCROLL
+   ============================================================ */
+      .so-fade {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.55s var(--ease),
+          transform 0.55s var(--ease);
+      }
+      .so-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* delay helpers */
+      .so-delay-1 {
+        transition-delay: 0.08s;
+      }
+      .so-delay-2 {
+        transition-delay: 0.16s;
+      }
+      .so-delay-3 {
+        transition-delay: 0.24s;
+      }
+      .so-delay-4 {
+        transition-delay: 0.32s;
+      }
+
+      /* ============================================================
+   RESPONSIVE
+   ============================================================ */
+      @media (max-width: 900px) {
+        .so-mid-row {
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .so-hline-dashed {
+          display: none;
+        }
+
+        .so-mid-side {
+          flex-direction: row;
+          gap: 14px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .so-bottom-grid {
+          grid-template-columns: repeat(2, 1fr);
+          width: 90%;
+        }
+
+        .so-fork {
+          display: none;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .so-top-leadership .so-card,
+        .so-mid-center .so-card,
+        .so-mid-side .so-card {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .so-bottom-grid {
+          grid-template-columns: 1fr;
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .so-hero {
+          padding: 40px 20px 36px;
+        }
+        .so-chart-area {
+          padding: 32px 16px 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================================
+     HERO HEADER
+     ============================================================ -->
+    <header class="so-hero">
+      <div class="so-hero-inner">
+        <div class="so-hero-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="1em"
+            height="1em"
+          >
+            <g fill="none">
+              <path d="m3 7l9-5l9 5v1H3z" />
+              <path
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+                d="M21 22H3m3-10v6m6-6v6m6-6v6M3 7v1h18V7l-9-5z"
+              />
+            </g>
+          </svg>
+        </div>
+        <h1>Organizational <span class="accent">Structure</span></h1>
+        <p class="so-hero-sub">
+          <strong>Physics Education</strong> Study Program — Faculty of Tarbiyah
+          and Education Sciences, UIN Sunan Kalijaga Yogyakarta
+        </p>
+      </div>
+    </header>
+
+    <!-- ============================================================
+     CHART AREA
+     ============================================================ -->
+    <div class="so-chart-area">
+      <div class="so-tier">
+        <!-- ===================== REKTOR ===================== -->
+        <div class="so-top-leadership so-fade">
+          <div class="so-card">
+            <div class="so-card-role is-dark">Rector</div>
+            <div class="so-card-body">
+              <div class="so-avatar">
+                <div class="so-avatar-ring"></div>
+                <div class="so-avatar-inner">
+                  <img
+                    src="https://web.man1yogyakarta.sch.id/storage/graduates/BOZ6O61CTGozsnnYcOAgrTqxEcRHdz2dcnub872u.jpg"
+                    alt="Rektor"
+                  />
+                </div>
+              </div>
+              <div class="so-card-name">
+                Prof. Noorhaidi , S.Ag., M.A., M.Phil., Ph.D.
+              </div>
+              <div class="so-card-desc">
+                Rector of UIN Sunan Kalijaga Yogyakarta
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="so-vline so-vline-h36"></div>
+
+        <!-- ===================== DEKAN ===================== -->
+        <div class="so-top-leadership so-fade so-delay-1">
+          <div class="so-card">
+            <div class="so-card-role is-teal">Dean of FITK</div>
+            <div class="so-card-body">
+              <div class="so-avatar">
+                <div class="so-avatar-ring"></div>
+                <div class="so-avatar-inner">
+                  <!-- <img src="URL_FOTO_DEKAN.jpg" alt="Dekan"> -->
+                  👤
+                </div>
+              </div>
+              <div class="so-card-name">Prof. Dr. Sigit Purnama, M.Pd.</div>
+              <div class="so-card-desc">
+                Dekan Fakultas Ilmu Tarbiyah &amp; Keguruan
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="so-vline so-vline-h36"></div>
+
+        <!-- ===================== MIDDLE ROW ===================== -->
+        <div class="so-mid-row so-fade so-delay-2">
+          <!-- LEFT WING: PSMP -->
+          <div class="so-mid-side">
+            <div class="so-card">
+              <div class="so-card-role is-orange">Quality Assurance (PSMP)</div>
+              <div class="so-card-body">
+                <div class="so-avatar">
+                  <div class="so-avatar-ring"></div>
+                  <div class="so-avatar-inner">
+                    <!-- <img src="URL_FOTO_PSMP.jpg" alt="PSMP"> -->
+                    👤
+                  </div>
+                </div>
+                <div class="so-card-name">Nira Nurwulandari, M.Pd.</div>
+                <div class="so-card-desc">Program Quality Assurance Unit</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="so-hline-dashed"></div>
+
+          <!-- CENTER: KAPRODI + SEKPRODI -->
+          <div class="so-mid-center">
+            <div class="so-center-group">
+              <div class="so-card">
+                <div class="so-card-role is-teal">>Head of Study Program</div>
+                <div class="so-card-body">
+                  <div class="so-avatar">
+                    <div class="so-avatar-ring"></div>
+                    <div class="so-avatar-inner">
+                      <!-- <img src="URL_FOTO_KAPRODI.jpg" alt="Kaprodi"> -->
+                      👤
+                    </div>
+                  </div>
+                  <div class="so-card-name">Iva Nandya Atika, M.Ed.</div>
+                  <div class="so-card-desc">
+                    >Head of Physics Education Study Program
+                  </div>
+                </div>
+              </div>
+
+              <div class="so-vline so-vline-h28"></div>
+
+              <div class="so-card">
+                <div class="so-card-role is-teal">
+                  Secretary of Study Program
+                </div>
+                <div class="so-card-body">
+                  <div class="so-avatar">
+                    <div class="so-avatar-ring"></div>
+                    <div class="so-avatar-inner">
+                      <!-- <img src="URL_FOTO_SEKPRODI.jpg" alt="Sekprodi"> -->
+                      👤
+                    </div>
+                  </div>
+                  <div class="so-card-name">Puspo Rohmi, M.Pd.</div>
+                  <div class="so-card-desc">
+                    Secretary of Physics Education Study Program
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="so-hline-dashed"></div>
+
+          <!-- RIGHT WING: ALUMNI & HMPS -->
+          <div class="so-mid-side">
+            <div class="so-card">
+              <div class="so-card-role is-orange">Head of Alumni</div>
+              <div class="so-card-body">
+                <div class="so-avatar">
+                  <div class="so-avatar-ring"></div>
+                  <div class="so-avatar-inner">
+                    <!-- <img src="URL_FOTO_ALUMNI.jpg" alt="Ketua Alumni"> -->
+                    👤
+                  </div>
+                </div>
+                <div class="so-card-name">Fajar Kurnianto, M.Pd.</div>
+                <div class="so-card-desc">
+                  Physics Education Alumni Association
+                </div>
+              </div>
+            </div>
+
+            <div class="so-card">
+              <div class="so-card-role is-orange">Head of HMPS</div>
+              <div class="so-card-body">
+                <div class="so-avatar">
+                  <div class="so-avatar-ring"></div>
+                  <div class="so-avatar-inner">
+                    <!-- <img src="URL_FOTO_HMPS.jpg" alt="Ketua HMPS"> -->
+                    👤
+                  </div>
+                </div>
+                <div class="so-card-name">Atika Arum Mutiara Nabila</div>
+                <div class="so-card-desc">
+                  Physics Education Student Association
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector to bottom -->
+        <div class="so-vline so-vline-h44"></div>
+
+        <!-- ===================== BOTTOM 4 UNITS ===================== -->
+        <div class="so-bottom-area so-fade so-delay-3">
+          <div class="so-fork">
+            <div class="so-fork-inner-left"></div>
+            <div class="so-fork-inner-right"></div>
+          </div>
+
+          <div class="so-bottom-grid">
+            <div class="so-unit so-fade so-delay-1">
+              <div class="so-unit-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 472 384"
+                  width="1.2291666666666667em"
+                  height="1em"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m85 217l150 82l149-82v86l-149 81l-150-81zM235 0l234 128v171h-42V151L235 256L0 128z"
+                  />
+                </svg>
+              </div>
+              <div class="so-unit-name">Administrative Staff</div>
+            </div>
+            <div class="so-unit so-fade so-delay-2">
+              <div class="so-unit-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  height="1em"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M20 17a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H9.46c.35.61.54 1.3.54 2h10v11h-9v2m4-10v2H9v13H7v-6H5v6H3v-8H1.5V9a2 2 0 0 1 2-2zM8 4a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2"
+                  />
+                </svg>
+              </div>
+              <div class="so-unit-name">Academic Faculty</div>
+            </div>
+            <div class="so-unit so-fade so-delay-3">
+              <div class="so-unit-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  height="1em"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4l.11-.94L5 5.5L12 2l7 3.5v5h-1V6l-2.11 1.06zm-4 6c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"
+                  />
+                </svg>
+              </div>
+              <div class="so-unit-name">Students</div>
+            </div>
+            <div class="so-unit so-fade so-delay-4">
+              <div class="so-unit-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 14 14"
+                  width="1em"
+                  height="1em"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 13.5a9.26 9.26 0 0 0-5.61-2.95a1 1 0 0 1-.89-1V1.5A1 1 0 0 1 .85.74a1 1 0 0 1 .79-.23A9.3 9.3 0 0 1 7 3.43Zm0 0a9.26 9.26 0 0 1 5.61-2.95a1 1 0 0 0 .89-1V1.5a1 1 0 0 0-.35-.76a1 1 0 0 0-.79-.23A9.3 9.3 0 0 0 7 3.43Z"
+                  />
+                </svg>
+              </div>
+              <div class="so-unit-name">Journal Editorial Board</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== SOCIAL FOOTER ===================== -->
+        <div class="so-social so-fade so-delay-4">
+          <a
+            href="https://www.youtube.com/@pendidikanfisikauinsunankalijaga"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="1em"
+              height="1em"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M9.935 14.628v-5.62l5.403 2.82zM21.8 8.035s-.195-1.379-.795-1.986c-.76-.796-1.613-.8-2.004-.847C16.203 5 12.004 5 12.004 5h-.008s-4.198 0-6.997.202c-.391.047-1.243.05-2.004.847c-.6.607-.795 1.986-.795 1.986S2 9.653 2 11.272v1.517c0 1.618.2 3.237.2 3.237s.195 1.378.795 1.985c.76.797 1.76.771 2.205.855c1.6.153 6.8.2 6.8.2s4.203-.006 7.001-.208c.391-.047 1.244-.05 2.004-.847c.6-.607.795-1.985.795-1.985s.2-1.619.2-3.237v-1.517c0-1.619-.2-3.237-.2-3.237"
+              />
+            </svg>
+          </a>
+          <a href="https://instagram.com/pfis.uinsuka" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="1em"
+              height="1em"
+            >
+              <path
+                fill="currentColor"
+                d="M12 9.52A2.48 2.48 0 1 0 14.48 12A2.48 2.48 0 0 0 12 9.52m9.93-2.45a6.5 6.5 0 0 0-.42-2.26a4 4 0 0 0-2.32-2.32a6.5 6.5 0 0 0-2.26-.42C15.64 2 15.26 2 12 2s-3.64 0-4.93.07a6.5 6.5 0 0 0-2.26.42a4 4 0 0 0-2.32 2.32a6.5 6.5 0 0 0-.42 2.26C2 8.36 2 8.74 2 12s0 3.64.07 4.93a6.9 6.9 0 0 0 .42 2.27a3.9 3.9 0 0 0 .91 1.4a3.9 3.9 0 0 0 1.41.91a6.5 6.5 0 0 0 2.26.42C8.36 22 8.74 22 12 22s3.64 0 4.93-.07a6.5 6.5 0 0 0 2.26-.42a3.9 3.9 0 0 0 1.41-.91a3.9 3.9 0 0 0 .91-1.4a6.6 6.6 0 0 0 .42-2.27C22 15.64 22 15.26 22 12s0-3.64-.07-4.93m-2.54 8a5.7 5.7 0 0 1-.39 1.8A3.86 3.86 0 0 1 16.87 19a5.7 5.7 0 0 1-1.81.35H8.94A5.7 5.7 0 0 1 7.13 19a3.5 3.5 0 0 1-1.31-.86A3.5 3.5 0 0 1 5 16.87a5.5 5.5 0 0 1-.34-1.81V8.94A5.5 5.5 0 0 1 5 7.13a3.5 3.5 0 0 1 .86-1.31A3.6 3.6 0 0 1 7.13 5a5.7 5.7 0 0 1 1.81-.35h6.12a5.7 5.7 0 0 1 1.81.35a3.5 3.5 0 0 1 1.31.86A3.5 3.5 0 0 1 19 7.13a5.7 5.7 0 0 1 .35 1.81V12c0 2.06.07 2.27.04 3.06Zm-1.6-7.44a2.38 2.38 0 0 0-1.41-1.41A4 4 0 0 0 15 6H9a4 4 0 0 0-1.38.26a2.38 2.38 0 0 0-1.41 1.36A4.3 4.3 0 0 0 6 9v6a4.3 4.3 0 0 0 .26 1.38a2.38 2.38 0 0 0 1.41 1.41a4.3 4.3 0 0 0 1.33.26h6a4 4 0 0 0 1.38-.26a2.38 2.38 0 0 0 1.41-1.41a4 4 0 0 0 .26-1.38V9a3.8 3.8 0 0 0-.26-1.38ZM12 15.82A3.81 3.81 0 0 1 8.19 12A3.82 3.82 0 1 1 12 15.82m4-6.89a.9.9 0 0 1 0-1.79a.9.9 0 0 1 0 1.79"
+              />
+            </svg>
+          </a>
+          <a href="mailto:pfis@uin-suka.ac.id">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="1em"
+              height="1em"
+            >
+              <path
+                fill="currentColor"
+                d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+     SCROLL ANIMATION (Native IntersectionObserver)
+     ============================================================ -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var els = document.querySelectorAll(".so-fade");
+        if ("IntersectionObserver" in window) {
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("visible");
+                  obs.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          );
+          els.forEach(function (el) {
+            obs.observe(el);
+          });
+        } else {
+          els.forEach(function (el) {
+            el.classList.add("visible");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
